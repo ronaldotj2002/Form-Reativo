@@ -1,0 +1,109 @@
+<div class="col-md-6 offset-md-3">
+    <div class="card card-body">
+
+   
+
+<form [formGroup]='fg'>
+
+    <input type="number" class="form-control mb-4" name="id" id="id" [(ngModel)]='funcionario.id'
+    placeholder="Digite o id " title="Atenção aos números!!" formControlName="id">
+
+    <div *ngIf='id.invalid && id.touched' class="erro">
+        <div [ngSwitch]='id.errors !=null'>
+            <span *ngSwitchCase="id.errors['required']">
+                Id Obrigatório
+            </span>
+            <span *ngSwitchCase="id.errors['min'] !=null">
+                Valor do id está abaixo do minimo
+            </span>
+            <span *ngSwitchCase="id.errors['max'] !=null">
+                Valor do id está acima do maximo
+            </span>
+
+        </div>
+
+    </div>
+
+    <input type="text" name="nome" id="nome" [(ngModel)]='funcionario.nome'
+    placeholder="Digite o nome completo " title="Não utilize acentos" formControlName="nome" class="form-control mb-4" >
+    <div *ngIf='nome.invalid && nome.touched' class="erro">
+        <div [ngSwitch]='nome.errors !=null'>
+            <span *ngSwitchCase="nome.errors['required']">
+                Nome Obrigatório
+            </span>
+            <span *ngSwitchCase="nome.errors['minlength'] !=null">
+                Digite o nome completo
+            </span>
+            <span *ngSwitchCase="nome.errors['maxlength'] !=null">
+                Nome muito grande
+            </span>
+            <span *ngSwitchCase="nome.errors['pattern'] !=null">
+               Nome fora da regra, apenas letras de a a z, sem caracteres especiais
+            </span>
+
+        </div>
+
+    </div>
+
+    <input type="text" name="email" id="email" [(ngModel)]='funcionario.email'
+    placeholder="Digite o e-mail" title="Atenção ao e-mail" formControlName="email" class="form-control mb-4" >
+
+    <div *ngIf='email.invalid && email.touched' class="erro">
+        <div [ngSwitch]='email.errors !=null'>
+            <span *ngSwitchCase="email.errors['required']">
+                E-mail Obrigatório
+            </span>
+            <span *ngSwitchCase="email.errors['email'] !=null">
+                E-mail fora do padrão
+            </span>
+        
+            
+        </div>
+
+    </div>
+
+    <input type="text" name="foto" id="foto" [(ngModel)]='funcionario.foto'
+    placeholder="digite a url da foto " title="Digite apenas texto" formControlName="foto" class="form-control mb-4" >
+
+    <div *ngIf='foto.invalid && foto.touched' class="erro">
+        <div [ngSwitch]='foto.errors !=null'>
+            <span *ngSwitchCase="foto.errors['required']">
+                Foto Obrigatório
+            </span>
+            <span *ngSwitchCase="foto.errors['pattern'] !=null">
+                URL fora do padrão
+            </span>
+        
+            
+        </div>
+
+    </div>
+
+    <button (click)="gravar()" title="clique para gravar" class="btn btn-info col-md-4" [disabled]='fg.invalid'>Gravar</button>
+
+</form>
+</div>
+</div>
+<hr>
+
+
+<table class="table table-borderer col-md-6 offset-md-3">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of funcionarios">
+            <td>{{f.id}}</td>
+            <td>{{f.nome}}</td>
+            <td>{{f.email}}</td>
+            <td><img [src]='f.foto' class="img-thumbnail w25"></td>
+        </tr>
+
+    </tbody>
+</table>
+

@@ -1,0 +1,40 @@
+{
+  "funcionario": [
+    {
+      "id": 1,
+      "nome": "Ronaldo",
+      "email": "ronaldo@gmail.com",
+      "foto": "https://randomuser.me/api/portraits/lego/2.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Carlos",
+      "email": "carlos@gmail.com",
+      "foto": "https://randomuser.me/api/portraits/lego/5.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Daniel",
+      "email": "daniel@gmail.com",
+      "foto": "https://randomuser.me/api/portraits/lego/6.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "edson",
+      "email": "edson@gmail.com",
+      "foto": "https://randomuser.me/api/portraits/lego/0.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Teste",
+      "email": "ronaldotjustino@hotmail.com",
+      "foto": "https://randomuser.me/api/portraits/lego/6.jpg"
+    },
+    {
+      "id": 12,
+      "nome": "Ronaldo Teixeira",
+      "email": "ronaldotj2002@yahoo.com.br",
+      "foto": "foto.jpg"
+    }
+  ]
+}

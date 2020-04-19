@@ -1,0 +1,10 @@
+.erro{
+    position: relative;
+    top: -20px;
+    color: red;
+}
+td img{
+    width: 25%;
+    position: relative;
+    left: 250px;
+}

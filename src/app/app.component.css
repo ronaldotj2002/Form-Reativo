@@ -1,0 +1,17 @@
+header{
+    background-image: linear-gradient(45deg, rgb(89,68,177), rgb(241, 15, 173));
+    transform: skewY(10deg);
+}
+
+.texto{
+    max-width: 50em;
+    margin: 0 auto;
+    padding: 1.5em;
+    text-align: center;
+    color: #fff;
+    font-size: 65px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: skewY(-10deg);
+    
+}
